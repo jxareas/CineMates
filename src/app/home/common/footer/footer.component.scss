@@ -1,0 +1,72 @@
+$gradientDefaults: to bottom, rgba(20, 26, 50, 0) 0%, rgba(20, 26, 50, 0.01) 1%,
+rgba(20, 26, 50, 1) 100%;
+
+@mixin gradientBackground {
+  background: linear-gradient($gradientDefaults);
+}
+
+@mixin listStyles {
+  padding: 0.5rem;
+  list-style-type: none;
+}
+
+.ft {
+  text-align: center;
+  padding: 4rem 0;
+  @include gradientBackground;
+
+  .logo-ft {
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-item > a {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  nav {
+    flex-grow: 1;
+  }
+}
+
+.mnft {
+  > li {
+    margin-right: 1rem;
+  }
+
+  li {
+    @include listStyles;
+  }
+}
+
+.smft {
+  a {
+    color: #4f6b95;
+    font-size: 1.875rem;
+    min-width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  li {
+    @include listStyles;
+  }
+}
+
+.copy {
+  color: #4f6b95;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .dfxb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
