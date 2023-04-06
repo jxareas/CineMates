@@ -3,23 +3,24 @@ import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MediaApiInterceptor } from './api/media-api.interceptor';
 import { environment } from '../../environments/environment';
-import { API_KEY, BASE_URL } from './constants/constants';
+import { MediaService } from './api/media.service';
 
 @NgModule({
   declarations: [],
   imports: [CommonModule, HttpClientModule],
   providers: [
+    MediaService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: MediaApiInterceptor,
       multi: true,
     },
     {
-      provide: BASE_URL,
+      provide: 'BASE_URL',
       useValue: environment.baseUrl,
     },
     {
-      provide: API_KEY,
+      provide: 'API_KEY',
       useValue: environment.apiKey,
     },
   ],

@@ -11,8 +11,8 @@ import { API_KEY, BASE_URL } from '../constants/constants';
 @Injectable()
 export class MediaApiInterceptor implements HttpInterceptor {
   constructor(
-    @Inject(BASE_URL) private baseUrl: string,
-    @Inject(API_KEY) private apiKey: string,
+    @Inject('BASE_URL') private baseUrl: string,
+    @Inject('API_KEY') private apiKey: string,
   ) {}
 
   intercept(

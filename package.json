@@ -23,7 +23,10 @@
     "typecheck": "tsc --noEmit --strict --incremental false --tsBuildInfoFile null --project tsconfig.spec.json",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint",
     "prettier": "prettier '**/*.{svg,yml,js,ts,html,md,less,json}' --cache node_modules/.cache/prettier",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -58,6 +61,7 @@
     "@babel/eslint-parser": "^7.21.3",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-angular": "^17.4.4",
+    "@cypress/schematic": "2.5.0",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
@@ -72,7 +76,8 @@
     "kill-port": "^2.0.1",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
-    "typescript": "~4.9.4"
+    "typescript": "~4.9.4",
+    "cypress": "latest"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
