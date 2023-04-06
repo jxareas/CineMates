@@ -58,7 +58,7 @@
       <ul class="MovieList top">
         <ng-container *ngIf="!isLoadingTopRated">
           <li class="mb-3" *ngFor="let item of topRated">
-<!--            <cinemates-movie-card-small [movie]="item"></cinemates-movie-card-small>-->
+            <jx-media-card-small [movie]="item"/>
           </li>
         </ng-container>
         <ng-container *ngIf="isLoadingTopRated">

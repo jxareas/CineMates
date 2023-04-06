@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'runtime'
+  name: 'jxRuntime'
 })
 export class RuntimePipe implements PipeTransform {
 

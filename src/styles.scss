@@ -1,36 +1,29 @@
+$blue: #1e2747 !default;
+
+:root {
+  --bs-primary: $blue;
+}
+
 @import 'bootstrap/scss/bootstrap';
 @import 'font-awesome/css/font-awesome.css';
 @import 'animate.css/animate.min.css';
-
-$primary-background: #1e2747 !default;
-$primary-variant: #007aff;
-$secondary-variant: #edb709;
-$tertiary: #4f6b95;
-$tertiary-variant: #8da0bc;
-$highlight: #00bcff;
-$on-primary-background: #fff;
-
-.logo-image {
-  max-height: 100px;
-  max-width: 240px;
-}
-
-:root {
-  --bs-primary: $primary-background;
-}
 
 html,
 body {
   height: 100%;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  color: $tertiary-variant;
-  background-color: #151d26;
-  overflow-x: hidden;
+.logo-image {
+  max-height: 100px;
+  max-width: 240px;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #8da0bc;
+  background-color: #080f28;
+  overflow-x: hidden;
+}
 body.open {
   overflow: hidden;
 }
@@ -38,50 +31,44 @@ body.open {
 // Scrolls
 @media (min-width: 1200px) {
   ::-webkit-scrollbar-track {
-    background-color: $primary-background;
+    background-color: $blue;
   }
   ::-webkit-scrollbar {
     width: 0.7rem;
     height: 0.7rem;
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, $highlight, $primary-variant);
+    background: linear-gradient(to bottom, #00bcff, #007aff);
   }
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: $on-primary-background;
+  color: #fff;
 }
-
 a:hover,
 a:hover:not([href]):not([class]) {
   text-decoration: none;
-  color: $primary-variant;
+  color: #007aff;
 }
-
 button:focus {
   outline: none;
 }
-
 .btn-rounded {
   border-radius: 1.75rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 }
-
 nav ul,
 [class*='List'] {
   margin: 0;
   padding: 0;
 }
-
 nav li,
 [class*='List'] li {
   list-style-type: none;
 }
-
 .Button,
 button,
 [type='button'],
@@ -99,7 +86,7 @@ button,
 }
 
 .widget-title {
-  color: $tertiary;
+  color: #4f6b95;
   font-size: 0.75rem;
   text-align: center;
   background-color: #141a32;
@@ -114,34 +101,28 @@ button,
   font-size: 0.875rem;
   padding-top: 0.5rem;
 }
-
 .Info > span {
   display: inline-block;
   vertical-align: baseline;
   margin-right: 0.5rem;
 }
-
 .Info .Vote {
-  color: $secondary;
+  color: #edb709;
 }
-
 .Info .Vote {
   font-size: 1.125rem;
 }
-
 .Info .Vote:after {
   content: '/10';
   font-size: 0.875rem;
   vertical-align: baseline;
 }
-
 .Info > span.Qlty {
   margin-top: 0.3rem;
 }
-
 .Qlty {
   color: #1a1818;
-  background-color: $secondary-variant;
+  background-color: #edb709;
   font-size: 0.65rem;
   font-weight: 700;
   height: 1.125rem;
@@ -156,18 +137,15 @@ button,
 .post {
   position: relative;
 }
-
 .post .image {
   position: relative;
 }
-
 .post figure {
   margin: 0;
   position: relative;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
-
 .post img.thumbnail {
   position: absolute;
   left: 0;
@@ -177,7 +155,6 @@ button,
   object-fit: cover;
   border-radius: 5px;
 }
-
 .post .year {
   position: absolute;
   bottom: 0.5rem;
@@ -185,13 +162,12 @@ button,
   z-index: 3;
   font-size: 0.75rem;
   font-weight: 700;
-  background-color: $primary-variant;
+  background-color: #007aff;
   padding: 0 0.5rem;
   line-height: 1.2rem;
   border-radius: 1rem;
-  color: $on-primary-background;
+  color: #fff;
 }
-
 .post .title {
   font-size: 0.875rem;
   text-align: center;
@@ -199,15 +175,14 @@ button,
   margin-bottom: 0;
   padding-top: 0.5rem;
 }
-
 .post .image figure::before {
-  font-family: FontAwesome, serif;
+  font-family: FontAwesome;
   content: '\f04b';
   width: 3.75rem;
   height: 3.75rem;
   line-height: 3.75rem;
   text-align: center;
-  border: 2px solid $on-primary-background;
+  border: 2px solid #fff;
   position: absolute;
   left: 0;
   top: 0;
@@ -218,14 +193,12 @@ button,
   border-radius: 50%;
   font-size: 1.25rem;
   display: none;
-  color: $on-primary-background;
+  color: #fff;
   animation: zoomIn ease 0.2s;
 }
-
 .post:hover .image figure::before {
   display: block;
 }
-
 .post .image figure::after {
   content: '';
   padding-top: 150%;
@@ -233,7 +206,6 @@ button,
   display: block;
   border-radius: 5px;
 }
-
 .post .details {
   position: absolute;
   left: 60%;
@@ -252,18 +224,15 @@ button,
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-
 .post:hover .details {
   display: block;
 }
-
 .post .details .title {
   font-weight: 700;
   text-align: left;
   font-size: 1rem;
-  color: $on-primary-background;
+  color: #fff;
 }
-
 .post .details .bg {
   position: absolute;
   left: 0;
@@ -277,43 +246,36 @@ button,
   transform: scale(1.3);
   border-radius: 5px;
 }
-
 .post .details .genre > span:first-child {
-  color: $on-primary-background;
+  color: #fff;
 }
 
 .post.p-small {
   min-height: 100px;
   padding-left: 100px;
 }
-
 .post.p-small .image {
   width: 80px;
   position: absolute;
   left: 0;
   top: 0;
 }
-
 .post.p-small figure::before {
   transform: scale(0.6);
 }
-
 .post.p-small .image figure::after {
   padding-top: 100%;
 }
-
 .post.p-small .title {
   text-align: left;
   margin-top: 0;
   padding-top: 0;
 }
-
 .post.p-small .Info {
   margin-bottom: 0;
   padding-top: 0.15rem;
   font-size: 0.8em;
 }
-
 .post.p-small .Info .Vote {
   font-size: 0.9rem;
 }
@@ -322,7 +284,6 @@ button,
   counter-increment: top;
   position: relative;
 }
-
 .MovieList.top > li:before {
   content: '#' counter(top);
   min-width: 2.2rem;
@@ -333,9 +294,9 @@ button,
   left: -0.5rem;
   top: -0.5rem;
   z-index: 5;
-  background-color: $primary-variant;
+  background-color: #007aff;
   border: 5px solid #080f28;
-  color: $on-primary-background;
+  color: #fff;
   border-radius: 3rem;
   font-weight: 700;
   font-size: 0.9rem;
@@ -346,27 +307,23 @@ button,
   text-align: center;
   justify-content: center;
 }
-
 .nav-links,
 .nav-links a,
 .nav-links span {
-  background-color: $primary-background;
+  background-color: $blue;
   display: inline-block;
   vertical-align: top;
   border-radius: 5rem;
 }
-
 .nav-links a {
   cursor: pointer;
 }
-
 .nav-links {
   position: relative;
   padding: 0.5rem;
   font-size: 0;
   margin: 0 4rem 1rem;
 }
-
 .nav-links a,
 .nav-links span {
   font-size: 1rem;
@@ -376,20 +333,17 @@ button,
   line-height: 1.9rem;
   font-weight: 700;
   padding: 0.3rem;
-  color: $on-primary-background;
+  color: #fff;
 }
-
 .nav-links a:hover,
 .nav-links .current,
 .page-link:hover {
-  background-color: $primary-variant;
-  color: $on-primary-background;
+  background-color: #007aff;
+  color: #fff;
 }
-
 .page-link {
   border: 0;
 }
-
 .nav-links .prev,
 .nav-links .next {
   position: absolute;
@@ -397,19 +351,16 @@ button,
   width: 3.5rem;
   height: 3.5rem;
   line-height: 2.9rem;
-  color: $tertiary;
+  color: #4f6b95;
   font-size: 1.25rem;
 }
-
 .nav-links .prev:hover,
 .nav-links .next:hover {
-  color: $on-primary-background;
+  color: #fff;
 }
-
 .nav-links .prev {
   left: -4.3rem;
 }
-
 .nav-links .next {
   right: -4.3rem;
 }
@@ -417,23 +368,19 @@ button,
 .nav-links {
   white-space: nowrap;
 }
-
 .nav-links .page-link {
   display: none;
 }
-
 .nav-links .page-link.current,
 .nav-links .extend + .page-link {
   display: inline-block;
 }
-
 .nav-links .extend {
   font-size: 0;
   margin-right: 0;
 }
-
 .nav-links .extend:before {
-  content: 'de';
+  content: 'of';
   font-size: 1rem;
 }
 
@@ -445,24 +392,22 @@ button,
   top: 100%;
   margin-top: 0.5rem;
   padding: 1rem;
-  background-color: $primary-background;
+  background-color: $blue;
   border-radius: 0.5rem;
   max-height: 250px;
   overflow: auto;
   display: block;
+  padding: 1rem;
   z-index: 99;
 }
-
 .ep-autosuggest .post .image {
   width: 60px;
 }
-
 .ep-autosuggest .post {
   min-height: 60px;
   padding-left: 75px;
   margin-bottom: 1rem;
 }
-
 .ep-autosuggest .post .year {
   display: none;
 }
