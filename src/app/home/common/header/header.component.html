@@ -7,51 +7,50 @@
             <img class="logo-image" src="./assets/logo.png" alt="" />
           </a>
         </figure>
-        <span class="MenuBtn" data-tgl="aa-wp">
-          <i></i><i></i><i></i>
-        </span>
+        <span class="MenuBtn" data-tgl="aa-wp"> <i></i><i></i><i></i> </span>
         <div class="right">
-          <div class="search" >
+          <div class="search">
             <form>
               <span class="form-icon">
                 <input
                   type="text"
                   name="s"
                   placeholder="Search..."
-                  autocomplete="off"
-             />
+                  autocomplete="off" />
                 <button type="submit"><i class="fa fa-search"></i></button>
-<!--                <div-->
-<!--                  class="ep-autosuggest">-->
-<!--                  <div class="p-2">Loading...</div>-->
-                  <ng-container>
-<!--                   TODO: Add Media Small Card -->
-                  </ng-container>
-<!--                </div>-->
+                <!--                <div-->
+                <!--                  class="ep-autosuggest">-->
+                <!--                  <div class="p-2">Loading...</div>-->
+                <ng-container>
+                  <!--                   TODO: Add Media Small Card -->
+                </ng-container>
+                <!--                </div>-->
               </span>
             </form>
           </div>
           <div class="login">
-            <button class="btn btn-link">
-              Log In
-            </button>
+            <button class="btn btn-link">Log In</button>
             <button class="btn btn-primary">Register</button>
           </div>
           <nav class="menu">
             <ul class="clearfix">
               <li class="menu-item">
-                <a
-                >Home</a
-                >
+
+                <a>Home</a>
               </li>
+
               <li class="menu-item has-children">
                 <a>Genres</a>
-<!--                TODO : Refactor this dropdown list into a component-->
                 <ul class="sub-menu">
-<!--                 // TODO : Add list of Genres -->
+                  <li class="menu-item" *ngFor="let genre of genres">
+                    <a [routerLink]="['/category', genre.id]">{{
+                      genre.name
+                    }}</a>
+                  </li>
                 </ul>
               </li>
-<!--               TODO : Refactor this dropdown list into a component-->
+
+              <!--               TODO : Refactor this dropdown list into a component-->
               <li class="menu-item has-children one-row">
                 <a>Movies</a>
                 <ul class="sub-menu">
@@ -65,16 +64,18 @@
                     <a>Top Rated</a>
                   </li>
                   <li class="menu-item">
-                    <a >Trending</a>
+                    <a>Trending</a>
                   </li>
                   <li class="menu-item">
                     <a>Most Popular</a>
                   </li>
                 </ul>
               </li>
+
               <li class="menu-item">
                 <a>Series</a>
               </li>
+
             </ul>
           </nav>
         </div>
