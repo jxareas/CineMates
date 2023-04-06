@@ -2,11 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col d-flex align-items-center justify-content-between">
-        <figure class="logo">
-          <a>
-            <img class="logo-image" src="./assets/logo.png" alt="" />
-          </a>
-        </figure>
+        <jx-header-logo/>
         <span class="MenuBtn" data-tgl="aa-wp"> <i></i><i></i><i></i> </span>
         <div class="right">
           <div class="search">
@@ -34,48 +30,10 @@
           </div>
           <nav class="menu">
             <ul class="clearfix">
-              <li class="menu-item">
-
-                <a>Home</a>
-              </li>
-
-              <li class="menu-item has-children">
-                <a>Genres</a>
-                <ul class="sub-menu">
-                  <li class="menu-item" *ngFor="let genre of genres">
-                    <a [routerLink]="['/category', genre.id]">{{
-                      genre.name
-                    }}</a>
-                  </li>
-                </ul>
-              </li>
-
-              <!--               TODO : Refactor this dropdown list into a component-->
-              <li class="menu-item has-children one-row">
-                <a>Movies</a>
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a>Now Playing</a>
-                  </li>
-                  <li class="menu-item">
-                    <a>Ranking</a>
-                  </li>
-                  <li class="menu-item">
-                    <a>Top Rated</a>
-                  </li>
-                  <li class="menu-item">
-                    <a>Trending</a>
-                  </li>
-                  <li class="menu-item">
-                    <a>Most Popular</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="menu-item">
-                <a>Series</a>
-              </li>
-
+              <jx-menu-item name="Home" />
+              <jx-genre-dropdown />
+              <jx-movie-dropdown />
+              <jx-menu-item name="Series" />
             </ul>
           </nav>
         </div>

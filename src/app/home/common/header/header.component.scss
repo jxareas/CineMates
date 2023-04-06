@@ -1,6 +1,16 @@
 @mixin zoomWithEasingAnimation($duration: 0.4s) {
   animation: zoom ease $duration;
 }
+// TODO : Replace
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
 
 header {
   position: relative;
@@ -18,39 +28,15 @@ header {
     height: 160px;
     opacity: 0.9;
     background: linear-gradient(
-        to bottom,
-        rgba(20, 26, 50, 1) 1%,
-        rgba(20, 26, 50, 0) 100%
+      to bottom,
+      rgba(20, 26, 50, 1) 1%,
+      rgba(20, 26, 50, 0) 100%
     );
     box-shadow: none;
   }
 
   a {
     color: #fff;
-  }
-}
-
-.menu-item {
-  &.has-children > a:after {
-    font-family: 'FontAwesome';
-    content: '\f078';
-    font-size: 0.75rem;
-    margin-left: 0.35rem;
-    color: #007aff;
-  }
-
-  > a {
-    display: inline-block;
-    padding: 0.5rem 0;
-
-    &.active {
-      color: #007aff;
-      font-weight: 700;
-    }
-
-    &:hover {
-      color: #007aff;
-    }
   }
 }
 
@@ -88,13 +74,6 @@ nav li {
   list-style-type: none;
 }
 
-.logo {
-  margin-bottom: 0;
-  margin-right: 3rem;
-  padding: 0.2rem 0;
-  position: relative;
-  z-index: 5;
-}
 
 .right {
   width: 100%;
@@ -107,7 +86,6 @@ nav li {
   min-width: 3rem;
   height: 3rem;
   cursor: pointer;
-  background-color: transparent;
   padding: 0.75rem 0.85rem 0;
   background-color: #007aff;
   border-radius: 3rem;
@@ -143,40 +121,11 @@ nav li {
   flex-grow: 1;
 }
 
-.menu > ul > li {
+.menu ul > * {
   position: relative;
 }
 
-.sub-menu {
-  display: none;
-}
-
-.sub-menu li {
-  width: 50%;
-}
-
-.sub-menu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.875rem;
-}
-
-.sub-menu a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .hover-option:hover {
-}
-
-@keyframes zoom {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.07);
-  }
 }
 
 .search {
@@ -240,46 +189,12 @@ button {
   .menu {
     order: 1;
   }
-  .menu > ul > li {
-    // float: left;
+  .menu ul > * {
     display: inline-block;
     margin-right: 2.5rem;
   }
   .search .form-icon input:focus {
     width: 14rem;
-  }
-  .sub-menu {
-    position: absolute;
-    width: 340px;
-    left: -1rem;
-    top: 100%;
-    background-color: #1e2747;
-    border-radius: 5px;
-    padding: 0.5rem;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    animation: zoom ease 0.2s;
-  }
-  .sub-menu:before {
-    content: '';
-    position: absolute;
-    left: 1rem;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #1e2747;
-  }
-  .menu-item.has-children:hover .sub-menu {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: auto;
-  }
-  .menu-item.one-row .sub-menu {
-    width: 180px;
-  }
-  .menu-item.one-row .sub-menu li {
-    width: 100%;
   }
 }
 
@@ -323,18 +238,9 @@ button {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
   }
-  .menu > ul > li {
+  .menu ul > * {
     padding: 0.5rem 1.5rem;
     border-bottom: 1px solid rgb(24, 31, 54);
-  }
-  .sub-menu {
-    display: block;
-    padding-left: 1rem;
-  }
-  .sub-menu > li {
-    // float: left;
-    display: inline-block;
-    width: 50%;
   }
   header.open .right {
     transform: translatex(0);
