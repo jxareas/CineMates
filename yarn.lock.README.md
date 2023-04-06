@@ -1,14 +1,14 @@
 All of our npm dependencies are locked via the `yarn.lock` file for the following reasons:
 
-- our project has lots of dependencies which update at unpredictable times, so it's important that
+- Our project has lots of dependencies which update at unpredictable times, so it's important that
   we update them explicitly once in a while rather than implicitly when any of us runs `yarn install`
-- locked dependencies allow us to detect when node_modules folder is out of date after a branch switch
+- Locked dependencies allow us to detect when node_modules folder is out of date after a branch switch
   which allows us to build the project with the correct dependencies every time
 
 Before changing a dependency, do the following:
 
-- make sure you are in sync with `master`
-- ensure that your `node_modules` directory is not stale by running `yarn install`
+- Make sure you are in sync with `master`
+- Ensure that your `node_modules` directory is not stale by running `yarn install`
 
 
 To add a new dependency do the following: `yarn add <packagename> --dev`
