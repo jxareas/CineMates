@@ -1,0 +1,33 @@
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+button {
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  line-height: 2rem;
+  width: auto;
+  border-radius: 3rem;
+}
+
+button {
+  padding: 0.25rem 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: #fff;
+}
+.btn-link:hover {
+  animation: zoom ease 0.4s;
+}

@@ -1,0 +1,13 @@
+@import '../_partials/buttons';
+
+.btn-link {
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    @include zoomWithEase;
+  }
+}
+
+
+

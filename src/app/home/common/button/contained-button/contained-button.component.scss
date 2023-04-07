@@ -1,0 +1,9 @@
+@import '../_partials/buttons';
+
+.btn-primary {
+  background-color: #007aff;
+  &:hover {
+    @include zoomWithEase;
+  }
+}
+

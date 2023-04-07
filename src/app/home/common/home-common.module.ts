@@ -8,6 +8,9 @@ import { MovieDropdownComponent } from './menu/movie-dropdown/movie-dropdown.com
 import { GenreDropdownComponent } from './menu/genre-dropdown/genre-dropdown.component';
 import { MenuItemComponent } from './menu/menu-item/menu-item.component';
 import { LogoComponent } from './header/logo/header-logo.component';
+import { TextButtonComponent } from './button/text-button/text-button.component';
+import { ContainedButtonComponent } from './button/contained-button/contained-button.component';
+import { LoginButtonsComponent } from './header/login-buttons/login-buttons.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { LogoComponent } from './header/logo/header-logo.component';
     GenreDropdownComponent,
     MenuItemComponent,
     LogoComponent,
+    TextButtonComponent,
+    ContainedButtonComponent,
+    LoginButtonsComponent,
   ],
   imports: [CommonModule, NgOptimizedImage, MediaModule, RouterModule],
   exports: [FooterComponent, HeaderComponent],
