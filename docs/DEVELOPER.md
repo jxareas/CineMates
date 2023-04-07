@@ -1,4 +1,4 @@
-# Building and Testing ng-bootstrap
+# Building CineMates
 
 This document describes how to set up your development environment to build `CineMates`.
 It also explains the basic mechanics of using `git`, `node` and `yarn`.
