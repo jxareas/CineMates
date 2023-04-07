@@ -7,10 +7,10 @@ import { RouterModule } from '@angular/router';
 import { MovieDropdownComponent } from './menu/movie-dropdown/movie-dropdown.component';
 import { GenreDropdownComponent } from './menu/genre-dropdown/genre-dropdown.component';
 import { MenuItemComponent } from './menu/menu-item/menu-item.component';
-import { LogoComponent } from './header/logo/header-logo.component';
+import { LogoComponent } from './logo/header-logo.component';
 import { TextButtonComponent } from './button/text-button/text-button.component';
 import { ContainedButtonComponent } from './button/contained-button/contained-button.component';
-import { LoginButtonsComponent } from './header/login-buttons/login-buttons.component';
+import { LoginOrRegisterComponent } from './container/login-or-register/login-or-register.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     LogoComponent,
     TextButtonComponent,
     ContainedButtonComponent,
-    LoginButtonsComponent,
+    LoginOrRegisterComponent,
     SearchbarComponent,
   ],
   imports: [CommonModule, NgOptimizedImage, MediaModule, RouterModule],
