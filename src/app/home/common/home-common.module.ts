@@ -11,6 +11,7 @@ import { LogoComponent } from './header/logo/header-logo.component';
 import { TextButtonComponent } from './button/text-button/text-button.component';
 import { ContainedButtonComponent } from './button/contained-button/contained-button.component';
 import { LoginButtonsComponent } from './header/login-buttons/login-buttons.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LoginButtonsComponent } from './header/login-buttons/login-buttons.comp
     TextButtonComponent,
     ContainedButtonComponent,
     LoginButtonsComponent,
+    SearchbarComponent,
   ],
   imports: [CommonModule, NgOptimizedImage, MediaModule, RouterModule],
   exports: [FooterComponent, HeaderComponent],
