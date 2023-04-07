@@ -12,6 +12,7 @@ import { TextButtonComponent } from './button/text-button/text-button.component'
 import { ContainedButtonComponent } from './button/contained-button/contained-button.component';
 import { LoginOrRegisterComponent } from './container/login-or-register/login-or-register.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { TopMenuComponent } from './menu/top-menu/top-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     ContainedButtonComponent,
     LoginOrRegisterComponent,
     SearchbarComponent,
+    TopMenuComponent,
   ],
   imports: [CommonModule, NgOptimizedImage, MediaModule, RouterModule],
   exports: [FooterComponent, HeaderComponent],

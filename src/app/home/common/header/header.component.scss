@@ -72,12 +72,8 @@ nav li {
   bottom: 2px;
 }
 
-.menu {
+.top-menu {
   flex-grow: 1;
-}
-
-.menu ul > * {
-  position: relative;
 }
 
 .hover-option:hover {
@@ -93,13 +89,6 @@ nav li {
   .login,
   .searchbar {
     order: 3;
-  }
-  .menu {
-    order: 1;
-  }
-  .menu ul > * {
-    display: inline-block;
-    margin-right: 2.5rem;
   }
 }
 
@@ -128,15 +117,6 @@ nav li {
     transform: translatex(0);
     opacity: 1;
     z-index: 3;
-  }
-
-  .menu {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-  .menu ul > * {
-    padding: 0.5rem 1.5rem;
-    border-bottom: 1px solid rgb(24, 31, 54);
   }
   header.open .right {
     transform: translatex(0);
