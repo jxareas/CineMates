@@ -1,0 +1,8 @@
+<li class="menu-item has-children">
+  <a class="dropdown-title">Genres</a>
+  <ul class="sub-menu">
+    <li class="menu-item" *ngFor="let genre of genres">
+      <a [routerLink]="['/category', genre.id]">{{ genre.name }}</a>
+    </li>
+  </ul>
+</li>

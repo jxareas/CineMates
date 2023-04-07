@@ -1,0 +1,49 @@
+.search {
+  position: relative;
+
+  .form-icon {
+    position: relative;
+    padding: 0;
+    display: block;
+
+    input {
+      width: 11.5rem;
+      border: 1px solid rgba(61, 79, 145, 0.5);
+      background-color: rgba(8, 15, 40, 0.5);
+      color: inherit;
+      padding: 0.25rem 1rem;
+      border-radius: 2rem;
+      outline: none;
+      line-height: calc(2rem - 2px);
+      transition: all ease 0.2s;
+    }
+
+    button {
+      background-color: transparent !important;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0 0.5rem 0 0;
+      color: #007aff;
+      outline: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .search .form-icon input:focus {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .search {
+    margin-bottom: 1rem;
+
+    .form-icon input {
+      width: 100%;
+    }
+  }
+}

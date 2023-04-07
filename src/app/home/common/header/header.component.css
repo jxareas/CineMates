@@ -20,60 +20,8 @@ header a {
   color: #fff;
 }
 
-.menu-item.has-children > a:after {
-  font-family: "FontAwesome";
-  content: "\f078";
-  font-size: 0.75rem;
-  margin-left: 0.35rem;
-  color: #007aff;
-}
-.menu-item > a {
-  display: inline-block;
-  padding: 0.5rem 0;
-}
-.menu-item > a.active {
-  color: #007aff;
-  font-weight: 700;
-}
-.menu-item > a:hover {
-  color: #007aff;
-}
-
-.login {
-  display: flex;
-}
-.login button {
-  padding: 0.25rem 1rem;
-  width: 100%;
-  outline: none;
-}
-.login .btn-link {
-  text-decoration: none;
-  color: #fff;
-}
-.login .btn-link:hover {
-  animation: zoom ease 0.4s;
-}
-.login .btn-primary {
-  background-color: #007aff;
-}
-.login .btn-primary:hover {
-  animation: zoom ease 0.4s;
-}
-.login .btn:focus {
-  box-shadow: none;
-}
-
 nav li {
   list-style-type: none;
-}
-
-.logo {
-  margin-bottom: 0;
-  margin-right: 3rem;
-  padding: 0.2rem 0;
-  position: relative;
-  z-index: 5;
 }
 
 .right {
@@ -87,7 +35,6 @@ nav li {
   min-width: 3rem;
   height: 3rem;
   cursor: pointer;
-  background-color: transparent;
   padding: 0.75rem 0.85rem 0;
   background-color: #007aff;
   border-radius: 3rem;
@@ -119,86 +66,8 @@ nav li {
   bottom: 2px;
 }
 
-.menu {
+.top-menu {
   flex-grow: 1;
-}
-
-.menu > ul > li {
-  position: relative;
-}
-
-.sub-menu {
-  display: none;
-}
-
-.sub-menu li {
-  width: 50%;
-}
-
-.sub-menu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.875rem;
-}
-
-.sub-menu a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-@keyframes zoom {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.07);
-  }
-}
-.search {
-  position: relative;
-}
-
-.search .form-icon {
-  position: relative;
-  padding: 0;
-  display: block;
-}
-
-.search .form-icon input {
-  width: 11.5rem;
-  border: 1px solid rgba(61, 79, 145, 0.5);
-  background-color: rgba(8, 15, 40, 0.5);
-  color: inherit;
-  padding: 0.25rem 1rem;
-  border-radius: 2rem;
-  outline: none;
-  line-height: calc(2rem - 2px);
-  transition: all ease 0.2s;
-}
-
-button {
-  border: 0;
-  cursor: pointer;
-  padding: 0.5rem 2rem;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  line-height: 2rem;
-  width: auto;
-  border-radius: 3rem;
-}
-
-.search .form-icon button {
-  background-color: transparent !important;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding-right: 0.5rem;
-  color: #007aff;
-  outline: none;
 }
 
 @media (min-width: 992px) {
@@ -209,51 +78,8 @@ button {
     display: none;
   }
   .login,
-  .search {
+  .searchbar {
     order: 3;
-  }
-  .menu {
-    order: 1;
-  }
-  .menu > ul > li {
-    display: inline-block;
-    margin-right: 2.5rem;
-  }
-  .search .form-icon input:focus {
-    width: 14rem;
-  }
-  .sub-menu {
-    position: absolute;
-    width: 340px;
-    left: -1rem;
-    top: 100%;
-    background-color: #1e2747;
-    border-radius: 5px;
-    padding: 0.5rem;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    animation: zoom ease 0.2s;
-  }
-  .sub-menu:before {
-    content: "";
-    position: absolute;
-    left: 1rem;
-    top: -5px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #1e2747;
-  }
-  .menu-item.has-children:hover .sub-menu {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: auto;
-  }
-  .menu-item.one-row .sub-menu {
-    width: 180px;
-  }
-  .menu-item.one-row .sub-menu li {
-    width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -281,32 +107,6 @@ button {
     transform: translatex(0);
     opacity: 1;
     z-index: 3;
-  }
-  .search {
-    margin-bottom: 1rem;
-  }
-  .search .form-icon input {
-    width: 100%;
-  }
-  .login .btn-link {
-    background-color: rgb(24, 31, 54);
-    margin-right: 1rem;
-  }
-  .menu {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-  .menu > ul > li {
-    padding: 0.5rem 1.5rem;
-    border-bottom: 1px solid rgb(24, 31, 54);
-  }
-  .sub-menu {
-    display: block;
-    padding-left: 1rem;
-  }
-  .sub-menu > li {
-    display: inline-block;
-    width: 50%;
   }
   header.open .right {
     transform: translatex(0);
