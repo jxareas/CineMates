@@ -13,7 +13,7 @@ export class PortalComponent implements OnInit {
   trendingMedia : GetTrendingLastWeekResponse;
   isLoadingTrending = false;
 
-  constructor(private movieService: MediaService) {}
+  constructor(private mediaService: MediaService) {}
 
   goToTag(tag: string): void {
     // TODO : Handle change of tag function
@@ -24,7 +24,7 @@ export class PortalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.movieService.fetchTrendingMedia().subscribe({
+    this.mediaService.fetchTrendingMedia().subscribe({
       next: trendingMovies => {
         this.trendingMedia = trendingMovies
       },

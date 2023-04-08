@@ -16,6 +16,7 @@ export interface TrendingMediaDto {
   media_type: string;
   genre_ids: number[];
   popularity: number;
+  air_date : number;
   first_air_date: string;
   vote_average: number;
   vote_count: number;

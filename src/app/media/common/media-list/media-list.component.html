@@ -1,6 +1,6 @@
 <div class="row" *ngIf="!isLoading">
-  <div class="col-md-3 col-6 mb-3" *ngFor="let item of movies.results">
-    <jx-media-card [movie]="item"/>
+  <div class="col-md-3 col-6 mb-3" *ngFor="let media of trendingMedia.results">
+    <jx-media-card [movie]="media"/>
   </div>
 </div>
 <div class="row" *ngIf="isLoading">
@@ -13,9 +13,9 @@
     <a class="prev page-numbers" (click)="previousPage()">
       <i class="fa fa-arrow-left"></i>
     </a>
-    <a class="page-link current">{{movies.page || 1 | number: '0.0-0'}}</a>
+    <a class="page-link current">{{trendingMedia.page || 1 | number: '0.0-0'}}</a>
     <span class="extend">...</span>
-    <a class="page-link" (click)="goToPage(movies.total_pages)">{{movies.total_pages || 1 | number: '0.0-0'}}</a>
+    <a class="page-link" (click)="goToPage(trendingMedia.total_pages)">{{trendingMedia.total_pages || 1 | number: '0.0-0'}}</a>
     <a class="next page-numbers" (click)="nextPage()">
       <i class="fa fa-arrow-right"></i>
     </a>
