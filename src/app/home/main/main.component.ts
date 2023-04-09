@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  GetTrendingLastWeekResponse,
-  TrendingMediaDto,
-} from '../../media/dto/get-trending-last-week-response';
+import { TrendingMediaDto } from '../../media/dto/get-trending-last-week-response';
 import { MediaService } from '../../media/api/media.service';
 import { delay } from 'rxjs';
 import { TopRatedMoviesDto } from '../../media/dto/get-top-rated-movies-response';
@@ -32,7 +29,7 @@ export class MainComponent implements OnInit {
       .pipe(delay(500))
       .subscribe({
         next: trendingMedia => {
-          this.trendingLastWeek = trendingMedia.results.slice(0, 7);
+          this.trendingLastWeek = trendingMedia.results;
           this.isLoadingTrending = false;
         },
         error: () => (this.isLoadingTrending = false),
