@@ -1,27 +1,118 @@
-# CineMates
+<a name="readme-top"></a>
+<br />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+<div align="center">
+  <a href="#">
+   <!-- Replace this logos for a custom official logos -->
+    <img src="./readme-assets/logos/official_logo_no_letters.png" alt="Logo" width="285" height="100">
+  </a>
 
-## Development server
+<h1 align = "center">
+<b><i>CineMates</i></b>
+</h1>
+    <!-- Add/Remove categories depending on your project -->
+  <p align="center">
+    <a href="#-screenshots-">Screenshots</a>
+    ·
+    <a href="#-requirements-">Requirements</a>
+    ·
+    <a href="#-technologies-">Technologies</a>
+    ·
+    <a href="#-acknowledgements-">Acknowledgements</a>
+    ·
+    <a href="#-license-">License</a>
+  </p>
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- Here goes the project description -->
 
-## Code scaffolding
+**CineMates** is a website built using the Angular framework, that provides users with a comprehensive source of information on movies, TV shows, and actors. The website features a sleek and user-friendly interface that allows users to easily browse through their favorite movies, TV shows, or actors.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🕹️ UI/UX 🕹️
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🚧 Work In Progress. 🚧
 
-## Running unit tests
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📷 Screenshots 📷
 
-## Running end-to-end tests
+🚧 Work In Progress. 🚧
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Further help
+## 📝 Requirements 📝
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project uses [The Movie Database API](https://developers.themoviedb.org/3) to show data about movies, TV show/season, actors and their respective images.
+
+1. Request an API key by creating an account and clicking the "API" link in the left hand side bar, at: https://www.themoviedb.org/
+2. Clone this repository
+
+```bash
+git clone https://github.com/your_username_/Project-Name.git
+```
+
+3. Install npm packages
+
+```bash
+yarn install
+```
+
+Enter your API key in `environment.ts`
+
+```javascript
+export const environment = {
+  production: true,
+  apiKey: 'hereGoesYourApiKey',
+  baseUrl: 'https://api.themoviedb.org/3',
+};
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🦾 Technologies 🦾
+
+TBD.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐ Acknowledgements ⭐
+
+The project idea and the logos were originally used and designed by [Antonio Di Nuzzo](https://github.com/indisparte) in a Mobile App for Android, with the same name.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 📜 License 📜
+
+This project is under the [MIT License](./LICENSE).
+
+```
+MIT License
+
+Copyright (c) 2023 Jonathan Areas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- This is a custom version of the Read-My-README template, by Jon Areas,
+found at: https://github.com/jxareas/read-my-readme -->
