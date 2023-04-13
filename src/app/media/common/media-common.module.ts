@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { PipesModule } from '../../core/pipes/pipes.module';
 import { UiModule } from '../../core/ui/ui.module';
 import { MediaPagerComponent } from './media-pager/media-pager.component';
+import { TopMoviesSectionComponent } from './sections/top-movies-section/top-movies-section.component';
+import { MediaSectionComponent } from './sections/media-section/media-section.component';
+import { TopShowsSectionComponent } from './sections/top-shows-section/top-shows-section.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +17,11 @@ import { MediaPagerComponent } from './media-pager/media-pager.component';
     MediaCardComponent,
     MediaListComponent,
     MediaPagerComponent,
+    TopMoviesSectionComponent,
+    MediaSectionComponent,
+    TopShowsSectionComponent,
   ],
   imports: [CommonModule, RouterModule, PipesModule, UiModule],
-  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent],
+  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent, TopMoviesSectionComponent, TopShowsSectionComponent],
 })
 export class MediaCommonModule {}

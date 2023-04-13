@@ -74,34 +74,10 @@
 <!-- Sections -->
 <div class="container">
   <div class="row">
-    <div class="col-md-9">
-      <router-outlet></router-outlet>
-    </div>
+    <div class="col-md-9"><router-outlet></router-outlet></div>
     <div class="col-md-3">
-      <div class="widget-title">Top of All Time</div>
-      <ul class="MovieList top">
-        <ng-container *ngIf="!isLoadingTopRated">
-          <li class="mb-3" *ngFor="let item of topRated">
-            <jx-media-card-small [movie]="item" />
-          </li>
-        </ng-container>
-        <ng-container *ngIf="isLoadingTopRated">
-          <li class="mb-3" *ngFor="let item of [].constructor(8)">
-            <div class="row">
-              <div class="col-4">
-                <jx-skeleton height="80px" radius="0.5em"></jx-skeleton>
-              </div>
-              <div class="col">
-                <jx-skeleton height="20px" radius="0.5em"></jx-skeleton>
-                <jx-skeleton
-                  height="20px"
-                  radius="0.5em"
-                  class="mt-3"></jx-skeleton>
-              </div>
-            </div>
-          </li>
-        </ng-container>
-      </ul>
+      <jx-top-movies-section />
+      <jx-top-shows-section />
     </div>
   </div>
 </div>

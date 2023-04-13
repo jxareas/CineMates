@@ -11,15 +11,12 @@ import { TopRatedMoviesDto } from '../../media/dto/get-top-rated-movies-response
 })
 export class MainComponent implements OnInit {
   trendingLastWeek: TrendingMediaDto[];
-  topRated: TopRatedMoviesDto[];
   isLoadingTrending: boolean;
-  isLoadingTopRated: boolean;
 
   constructor(private mediaService: MediaService) {}
 
   ngOnInit(): void {
     this.subscribeToTrendingMovies();
-    this.subscribeToTopRatedMovies();
   }
 
   subscribeToTrendingMovies(): void {
@@ -33,20 +30,6 @@ export class MainComponent implements OnInit {
           this.isLoadingTrending = false;
         },
         error: () => (this.isLoadingTrending = true),
-      });
-  }
-
-  subscribeToTopRatedMovies(): void {
-    this.isLoadingTopRated = true;
-    this.mediaService
-      .fetchTopRatedMovies()
-      .pipe(delay(500))
-      .subscribe({
-        next: topRatedMoviesResponse => {
-          this.topRated = topRatedMoviesResponse.results.slice(0, 10);
-          this.isLoadingTopRated = false;
-        },
-        error: () => (this.isLoadingTopRated = true),
       });
   }
 }
