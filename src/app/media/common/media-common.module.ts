@@ -6,14 +6,16 @@ import { MediaListComponent } from './media-list/media-list.component';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../../core/pipes/pipes.module';
 import { UiModule } from '../../core/ui/ui.module';
+import { MediaPagerComponent } from './media-pager/media-pager.component';
 
 @NgModule({
   declarations: [
     MediaCardSmallComponent,
     MediaCardComponent,
     MediaListComponent,
+    MediaPagerComponent,
   ],
   imports: [CommonModule, RouterModule, PipesModule, UiModule],
-  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent],
+  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent],
 })
 export class MediaCommonModule {}

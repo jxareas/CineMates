@@ -1,42 +1,5 @@
-<section class="home-movies">
-  <div class="Top">
-    <h2 class="Title">Browse</h2>
-    <div class="btnstp">
-      <a
-        data-tab="tab-1"
-        class="Button STPb"
-        [class.Current]="tagActive == 'popular'"
-        (click)="goToTag('popular')">
-        TRENDING
-      </a>
-      <a
-        data-tab="tab-2"
-        class="Button STPb"
-        [class.Current]="tagActive == 'playing'"
-        (click)="goToTag('playing')">
-        NOW PLAYING
-      </a>
-      <a
-        data-tab="tab-3"
-        class="Button STPb"
-        [class.Current]="tagActive == 'rated'"
-        (click)="goToTag('rated')">
-        TOP RATED
-      </a>
-      <a
-        data-tab="tab-4"
-        class="Button STPb"
-        [class.Current]="tagActive == 'upcoming'"
-        (click)="goToTag('upcoming')">
-        UPCOMING
-      </a>
-    </div>
-  </div>
-</section>
-<div class="tab">
-  <jx-media-list
-    [trendingMedia]="trendingMedia"
-    (changePage)="goToPage($event)"
-    [isLoading]="isLoadingTrending">
-  </jx-media-list>
-</div>
+<jx-media-pager />
+<jx-media-list
+  [trendingMedia]="trendingMedia"
+  (changePage)="goToPage($event)"
+  [isLoading]="isLoadingTrending" />
