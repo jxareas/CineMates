@@ -30,14 +30,17 @@
 
 ## 🕹️ UI/UX 🕹️
 
-
-🚧 Work In Progress. 🚧
+🚧 *Work In Progress...* 🚧
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📷 Screenshots 📷
 
-🚧 Work In Progress. 🚧
+🚧 *Work In Progress...* 🚧
+
+| Home Screen   | Home Screen  | 
+| ------------- | ------------- |  
+| ![](readme-assets/images/landing_top_ipad_pro.png)  | ![](readme-assets/images/landing_bottom_ipad_pro.png)  | 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,17 +75,18 @@ export const environment = {
 
 ## 🦾 Technologies 🦾
 
-TBD.
+
+🚧 *Work In Progress...* 🚧
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐ Acknowledgements ⭐
 
-The project idea and the logos were originally used and designed by [Antonio Di Nuzzo](https://github.com/indisparte) in a Mobile App for Android, with the same name.
+The original project idea, as well as the logos are credited to [Antonio Di Nuzzo](https://github.com/indisparte), who designed CineMates as a [Mobile App for Android](https://github.com/indisparte/cinemates).
 
+Additionally, the user interface is based off of [Cuevana](https://cuevana3.network/inicio): an Argentine file sharing website that offers movies and television content in their original languages with Spanish subtitles.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📜 License 📜
 
