@@ -12,8 +12,8 @@ import { TopRatedMoviesDto } from '../../media/dto/get-top-rated-movies-response
 export class MainComponent implements OnInit {
   trendingLastWeek: TrendingMediaDto[];
   topRated: TopRatedMoviesDto[];
-  isLoadingTrending = true;
-  isLoadingTopRated = true;
+  isLoadingTrending: boolean;
+  isLoadingTopRated: boolean;
 
   constructor(private mediaService: MediaService) {}
 
@@ -32,7 +32,7 @@ export class MainComponent implements OnInit {
           this.trendingLastWeek = trendingMedia.results;
           this.isLoadingTrending = false;
         },
-        error: () => (this.isLoadingTrending = false),
+        error: () => (this.isLoadingTrending = true),
       });
   }
 
@@ -46,7 +46,7 @@ export class MainComponent implements OnInit {
           this.topRated = topRatedMoviesResponse.results.slice(0, 10);
           this.isLoadingTopRated = false;
         },
-        error: () => (this.isLoadingTopRated = false),
+        error: () => (this.isLoadingTopRated = true),
       });
   }
 }

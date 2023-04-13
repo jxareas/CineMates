@@ -1,17 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {GetTrendingLastWeekResponse} from "../../../media/dto/get-trending-last-week-response";
-import {MediaService} from "../../../media/api/media.service";
+import { Component, OnInit } from '@angular/core';
+import { GetTrendingLastWeekResponse } from '../../../media/dto/get-trending-last-week-response';
+import { MediaService } from '../../../media/api/media.service';
 
 @Component({
   selector: 'jx-portal',
   templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.scss']
+  styleUrls: ['./portal.component.scss'],
 })
 export class PortalComponent implements OnInit {
-  tagActive : string = 'popular';
+  tagActive: string = 'popular';
 
-  trendingMedia : GetTrendingLastWeekResponse;
-  isLoadingTrending = false;
+  trendingMedia: GetTrendingLastWeekResponse;
+  isLoadingTrending: boolean;
 
   constructor(private mediaService: MediaService) {}
 
@@ -24,13 +24,15 @@ export class PortalComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.mediaService.fetchTrendingMedia().subscribe({
-      next: trendingMovies => {
-        this.trendingMedia = trendingMovies
-      },
-    });
+    this.isLoadingTrending = true;
+    this.mediaService
+      .fetchTrendingMedia()
+      .subscribe({
+        next: trendingMovies => {
+          this.trendingMedia = trendingMovies;
+          this.isLoadingTrending = false;
+        },
+        error: () => (this.isLoadingTrending = true),
+      });
   }
-
-
-
 }

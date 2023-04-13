@@ -8,7 +8,7 @@
     <jx-skeleton height="300px" radius="0.5em"></jx-skeleton>
   </div>
 </div>
-<nav class="navigation pagination" [class.pe-none]="isLoading">
+<nav *ngIf="!isLoading" class="navigation pagination" [class.pe-none]="isLoading">
   <div class="nav-links">
     <a class="prev page-numbers" (click)="previousPage()">
       <i class="fa fa-arrow-left"></i>
