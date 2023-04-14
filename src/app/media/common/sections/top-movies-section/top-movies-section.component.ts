@@ -22,13 +22,10 @@ export class TopMoviesSectionComponent implements OnInit {
     this.isLoadingTopRatedMovies = true;
     this.mediaService
       .fetchTopRatedMovies()
-      .pipe(
-        map(response => response.results.slice(0, 5)),
-        delay(1_000),
-      )
+      .pipe(delay(1_000))
       .subscribe({
         next: topRatedMoviesResponse => {
-          this.topRatedMovies = topRatedMoviesResponse;
+          this.topRatedMovies = topRatedMoviesResponse.results.slice(0, 5);
           this.isLoadingTopRatedMovies = false;
         },
         error: () => (this.isLoadingTopRatedMovies = true),

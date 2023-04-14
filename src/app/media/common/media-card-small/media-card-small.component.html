@@ -21,7 +21,7 @@
     </h2>
   </a>
   <p class="Info">
-    <span class="Vote">{{ movie.vote_average }}</span>
+    <span class="Vote">{{ movie.vote_average | jxRound : 1 }}</span>
     <!-- <span class="Time">3h 2m</span> -->
     <span class="Date">{{ movie.release_date | date : 'yyyy' }}</span>
     <span class="Qlty">HD</span>

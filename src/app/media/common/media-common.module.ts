@@ -10,6 +10,8 @@ import { MediaPagerComponent } from './media-pager/media-pager.component';
 import { TopMoviesSectionComponent } from './sections/top-movies-section/top-movies-section.component';
 import { MediaSectionComponent } from './sections/media-section/media-section.component';
 import { TopShowsSectionComponent } from './sections/top-shows-section/top-shows-section.component';
+import { TopTrendingSectionComponent } from './sections/top-trending/top-trending-section.component';
+import {RoundPipe} from "../../core/pipes/round.pipe";
 
 @NgModule({
   declarations: [
@@ -20,8 +22,9 @@ import { TopShowsSectionComponent } from './sections/top-shows-section/top-shows
     TopMoviesSectionComponent,
     MediaSectionComponent,
     TopShowsSectionComponent,
+    TopTrendingSectionComponent,
   ],
   imports: [CommonModule, RouterModule, PipesModule, UiModule],
-  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent, TopMoviesSectionComponent, TopShowsSectionComponent],
+  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent, TopMoviesSectionComponent, TopShowsSectionComponent, MediaSectionComponent, TopTrendingSectionComponent],
 })
 export class MediaCommonModule {}
