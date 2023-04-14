@@ -25,7 +25,7 @@
     <ng-container *ngIf="details; else loading">
       <div class="title">{{ details.title || details.name }}</div>
       <p class="Info">
-        <span class="Vote">{{ details.vote_average | number : '1.2-2' }}</span>
+        <span class="Vote">{{ details.vote_average | jxRound : 2 }}</span>
         <span *ngIf="movie.title" class="Time">{{
           details.runtime | jxRuntime
         }}</span>

@@ -9,6 +9,6 @@ export class MediaTabsComponent {
   tagActive: string = 'popular';
 
   goToTag(tag: string): void {
-    // TODO : Handle change of tag function
+    this.tagActive = tag;
   }
 }

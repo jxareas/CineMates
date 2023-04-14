@@ -19,7 +19,7 @@ export class TabViewComponent implements OnInit {
     // TODO : Handle change of tag function
   }
 
-  goToPage(number: string): void {
+  goToPage(page : number): void {
     // TODO : Handle change of page function
   }
 
