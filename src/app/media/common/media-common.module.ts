@@ -6,25 +6,42 @@ import { MediaListComponent } from './media-list/media-list.component';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../../core/pipes/pipes.module';
 import { UiModule } from '../../core/ui/ui.module';
-import { MediaPagerComponent } from './media-pager/media-pager.component';
+import { MediaTabsComponent } from './media-pager/media-tabs.component';
 import { TopMoviesSectionComponent } from './sections/top-movies-section/top-movies-section.component';
 import { MediaSectionComponent } from './sections/media-section/media-section.component';
 import { TopShowsSectionComponent } from './sections/top-shows-section/top-shows-section.component';
 import { TopTrendingSectionComponent } from './sections/top-trending/top-trending-section.component';
-import {RoundPipe} from "../../core/pipes/round.pipe";
+import { MediaCarouselComponent } from './media-carousel/media-carousel.component';
+import { MediaDataViewComponent } from './media-data-view/media-data-view.component';
+import { MediaPaginatorComponent } from './media-paginator/media-paginator.component';
+
 
 @NgModule({
   declarations: [
     MediaCardSmallComponent,
     MediaCardComponent,
     MediaListComponent,
-    MediaPagerComponent,
+    MediaTabsComponent,
     TopMoviesSectionComponent,
     MediaSectionComponent,
     TopShowsSectionComponent,
     TopTrendingSectionComponent,
+    MediaCarouselComponent,
+    MediaDataViewComponent,
+    MediaPaginatorComponent,
   ],
   imports: [CommonModule, RouterModule, PipesModule, UiModule],
-  exports: [MediaCardSmallComponent, MediaCardComponent, MediaListComponent, MediaPagerComponent, TopMoviesSectionComponent, TopShowsSectionComponent, MediaSectionComponent, TopTrendingSectionComponent],
+  exports: [
+    MediaCardSmallComponent,
+    MediaCardComponent,
+    MediaListComponent,
+    MediaTabsComponent,
+    TopMoviesSectionComponent,
+    TopShowsSectionComponent,
+    MediaSectionComponent,
+    TopTrendingSectionComponent,
+    MediaCarouselComponent,
+    MediaDataViewComponent,
+  ],
 })
 export class MediaCommonModule {}

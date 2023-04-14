@@ -1,25 +1,10 @@
-<div class="tab">
 <div class="row" *ngIf="!isLoading">
   <div class="col-md-3 col-6 mb-3" *ngFor="let media of trendingMedia.results">
-    <jx-media-card [movie]="media"/>
+    <jx-media-card [movie]="media" />
   </div>
 </div>
 <div class="row" *ngIf="isLoading">
   <div class="col-md-3 col-6 mb-3" *ngFor="let item of [].constructor(20)">
     <jx-skeleton height="300px" radius="0.5em"></jx-skeleton>
   </div>
-</div>
-<nav *ngIf="!isLoading" class="navigation pagination" [class.pe-none]="isLoading">
-  <div class="nav-links">
-    <a class="prev page-numbers" (click)="previousPage()">
-      <i class="fa fa-arrow-left"></i>
-    </a>
-    <a class="page-link current">{{trendingMedia.page || 1 | number: '0.0-0'}}</a>
-    <span class="extend">...</span>
-    <a class="page-link" (click)="goToPage(trendingMedia.total_pages)">{{trendingMedia.total_pages || 1 | number: '0.0-0'}}</a>
-    <a class="next page-numbers" (click)="nextPage()">
-      <i class="fa fa-arrow-right"></i>
-    </a>
-  </div>
-</nav>
 </div>

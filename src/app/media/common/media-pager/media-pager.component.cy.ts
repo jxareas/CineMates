@@ -1,7 +1,7 @@
-import { MediaPagerComponent } from './media-pager.component'
+import { MediaTabsComponent } from './media-tabs.component'
 
 describe('MediaPagerComponent', () => {
   it('should mount', () => {
-    cy.mount(MediaPagerComponent)
+    cy.mount(MediaTabsComponent)
   })
 })

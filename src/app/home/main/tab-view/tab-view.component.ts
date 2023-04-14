@@ -3,11 +3,11 @@ import { GetTrendingLastWeekResponse } from '../../../media/dto/get-trending-las
 import { MediaService } from '../../../media/api/media.service';
 
 @Component({
-  selector: 'jx-portal',
-  templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.scss'],
+  selector: 'jx-tab-view',
+  templateUrl: './tab-view.component.html',
+  styleUrls: ['./tab-view.component.scss'],
 })
-export class PortalComponent implements OnInit {
+export class TabViewComponent implements OnInit {
   tagActive: string = 'popular';
 
   trendingMedia: GetTrendingLastWeekResponse;

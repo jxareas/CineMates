@@ -1,0 +1,73 @@
+<div id="carousel-wrapper">
+  <div
+    id="carousel-main"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="3000"
+    [class.d-none]="isLoadingTrending">
+    <div class="carousel-inner">
+      <div
+        class="carousel-item"
+        *ngFor="let media of trendingLastWeek; let i = index"
+        [class.active]="i == 0"
+        data-bs-interval="7000">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="carousel-container">
+                <a>
+                  <div class="title">
+                    {{ media.title || media.name }}
+                    <span class="Qlty align-middle">{{
+                      media.media_type == 'movie' ? 'MOVIE' : 'TV SHOW'
+                      }}</span>
+                  </div>
+                </a>
+                <p class="Info">
+                  <span class="Vote">{{
+                    media.vote_average | number : '1.2-2'
+                    }}</span>
+                  <!--                  TODO : Replace this with a valid runtime for movies or remove altogether -->
+                  <!--                  <span class="Time">1h 56m</span>-->
+                  <span class="Date">{{
+                    media.release_date | date : 'yyyy'
+                    }}</span>
+                  <span class="Qlty">HD</span>
+                </p>
+                <p class="description">{{ media.overview }}</p>
+                <a
+                  class="btn btn-primary btn-lg btn-rounded"
+                  [routerLink]="['/details', media.id, media.media_type]">
+                  <i class="fa fa-play-circle"></i>
+
+                  Watch Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://image.tmdb.org/t/p/original{{ media.backdrop_path }}"
+          alt=""
+          draggable="false" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ol class="carousel-indicators">
+            <ng-container *ngFor="let item of trendingLastWeek; let i = index">
+              <li
+                data-bs-target="#carousel-main"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i == 0"></li>
+            </ng-container>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-container *ngIf="isLoadingTrending">
+    <jx-skeleton height="475px" class="mb-3"></jx-skeleton>
+  </ng-container>
+</div>

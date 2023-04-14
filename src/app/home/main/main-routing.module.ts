@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
-import { PortalComponent } from './portal/portal.component';
+import { TabViewComponent } from './tab-view/tab-view.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: PortalComponent,
+        component: TabViewComponent,
       },
     ],
   },
