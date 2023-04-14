@@ -4,7 +4,7 @@
 <div align="center">
   <a href="#">
    <!-- Replace this logos for a custom official logos -->
-    <img src="./readme-assets/logos/official_logo_no_letters.png" alt="Logo" width="285" height="100">
+    <img src="./readme-assets/logos/official_logo_no_letters_alt.png" alt="Logo" width="285" height="100">
   </a>
 
 <h1 align = "center">

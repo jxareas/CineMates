@@ -5,7 +5,8 @@ import { GenreDto, GetGenresResponse } from '../dto/get-genres-response';
 import { GetMoviesByQueryResponse } from '../dto/get-movies-by-query-response';
 import { GetTrendingLastWeekResponse } from '../dto/get-trending-last-week-response';
 import { GetTopRatedMoviesResponse } from '../dto/get-top-rated-movies-response';
-import {MediaType} from "../models/media-type";
+import { MediaType } from '../models/media-type';
+import {GetTopRatedShowsResponse} from "../dto/get-top-rated-shows-response";
 
 @Injectable()
 export class MediaService {
@@ -34,13 +35,18 @@ export class MediaService {
     );
   }
 
+  fetchTopRatedShows(page : number = 1) : Observable<GetTopRatedShowsResponse> {
+    return this.client.get<GetTopRatedShowsResponse>(`/tv/top_rated?page=${page}`)
+  }
+
   fetchTrendingMedia(): Observable<GetTrendingLastWeekResponse> {
     return this.client.get<GetTrendingLastWeekResponse>(`/trending/all/week`);
   }
 
-  fetchDetailsById(id: number, mediaType: MediaType = MediaType.Movie): Observable<any> {
+  fetchDetailsById(
+    id: number,
+    mediaType: MediaType = MediaType.Movie,
+  ): Observable<any> {
     return this.client.get(`/${mediaType}/${id}`);
   }
-
-
 }

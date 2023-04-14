@@ -1,7 +1,9 @@
 <div class="post p-small">
   <a [routerLink]="['/details', movie.id, 'movie']">
     <div class="image">
-      <span class="year">{{ movie.release_date | date : 'yyyy' }}</span>
+      <span class="year">{{
+        movie.release_date || movie.first_air_date | date : 'yyyy'
+      }}</span>
       <figure>
         <img
           class="thumbnail"
@@ -15,11 +17,11 @@
       </figure>
     </div>
     <h2 class="title">
-      {{ movie.title }}
+      {{ movie.title || movie.name }}
     </h2>
   </a>
   <p class="Info">
-    <span class="Vote">{{ movie.vote_average }}</span>
+    <span class="Vote">{{ movie.vote_average | jxRound : 1 }}</span>
     <!-- <span class="Time">3h 2m</span> -->
     <span class="Date">{{ movie.release_date | date : 'yyyy' }}</span>
     <span class="Qlty">HD</span>

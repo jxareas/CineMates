@@ -1,0 +1,26 @@
+<div>
+  <div class="widget-title">{{header}}</div>
+  <ul class="MovieList top">
+    <ng-container *ngIf="!isLoadingMedia">
+      <li class="mb-3" *ngFor="let item of media">
+        <jx-media-card-small [movie]="item" />
+      </li>
+    </ng-container>
+    <ng-container *ngIf="isLoadingMedia">
+      <li class="mb-3" *ngFor="let item of [].constructor(6)">
+        <div class="row">
+          <div class="col-4">
+            <jx-skeleton height="80px" radius="0.5em"></jx-skeleton>
+          </div>
+          <div class="col">
+            <jx-skeleton height="20px" radius="0.5em"></jx-skeleton>
+            <jx-skeleton
+              height="20px"
+              radius="0.5em"
+              class="mt-3"></jx-skeleton>
+          </div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>
