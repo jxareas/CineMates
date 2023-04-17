@@ -3,7 +3,7 @@
     <a class="prev page-numbers" (click)="previousPage()">
       <i class="fa fa-arrow-left"></i>
     </a>
-    <a class="page-link current">{{initialPage || 1 | number: '0.0-0'}}</a>
+    <a class="page-link current">{{currentPage || 1 | number: '0.0-0'}}</a>
     <span class="extend">...</span>
     <a class="page-link" (click)="goToPage(finalPage)">{{finalPage || 1 | number: '0.0-0'}}</a>
     <a class="next page-numbers" (click)="nextPage()">

@@ -6,22 +6,26 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./paginator.component.scss'],
 })
 export class PaginatorComponent {
-
-  @Input() initialPage: number = 1;
+  @Input() currentPage: number = 1;
 
   @Input() finalPage: number = 1;
 
-  @Output() changePage: EventEmitter<any> = new EventEmitter();
+  @Output() changePage: EventEmitter<number> = new EventEmitter();
 
   previousPage(): void {
-    //TODO : Handle navigation to previous page
+    if (this.currentPage > 1) {
+      this.goToPage(this.currentPage - 1);
+    }
   }
 
   nextPage(): void {
-    //TODO : Handle navigation to next page
+    if (this.currentPage < this.finalPage) {
+      this.goToPage(this.currentPage + 1);
+    }
   }
 
-  goToPage(page: number): void {
-    //TODO : Handle custom page navigation
+  goToPage(newPage: number): void {
+    this.currentPage = newPage;
+    this.changePage.emit(newPage);
   }
 }
