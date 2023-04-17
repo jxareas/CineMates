@@ -21,7 +21,7 @@ export class TopTrendingSectionComponent implements OnInit {
   subscribeToTrendingMedia(): void {
     this.isLoadingTrendingMedia = true;
     this.mediaService
-      .fetchTrendingMedia()
+      .trending()
       .pipe(delay(1_000))
       .subscribe(response => {
         this.trendingMedia = response.results.slice(0, 5);

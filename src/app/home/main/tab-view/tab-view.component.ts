@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetTrendingLastWeekResponse } from '../../../media/dto/get-trending-last-week-response';
 import { MediaService } from '../../../media/api/media.service';
+import {delay} from "rxjs";
 
 @Component({
   selector: 'jx-tab-view',
@@ -16,23 +17,23 @@ export class TabViewComponent implements OnInit {
   constructor(private mediaService: MediaService) {}
 
   goToTag(tag: string): void {
-    // TODO : Handle change of tag function
+    this.goToPage(tag)
   }
 
-  goToPage(page : number): void {
-    // TODO : Handle change of page function
+  goToPage(tag: string = 'trending', page: number = 1): void {
+    this.isLoadingTrending = true;
+    this.mediaService[tag](page)
+      .pipe(delay(500))
+      .subscribe({
+      next: trendingMovies => {
+        this.trendingMedia = trendingMovies;
+        this.isLoadingTrending = false;
+      },
+      error: () => (this.isLoadingTrending = true),
+    });
   }
 
   ngOnInit(): void {
-    this.isLoadingTrending = true;
-    this.mediaService
-      .fetchTrendingMedia()
-      .subscribe({
-        next: trendingMovies => {
-          this.trendingMedia = trendingMovies;
-          this.isLoadingTrending = false;
-        },
-        error: () => (this.isLoadingTrending = true),
-      });
+    this.goToPage()
   }
 }

@@ -6,8 +6,10 @@ import { GetMoviesByQueryResponse } from '../dto/get-movies-by-query-response';
 import { GetTrendingLastWeekResponse } from '../dto/get-trending-last-week-response';
 import { GetTopRatedMoviesResponse } from '../dto/get-top-rated-movies-response';
 import { MediaType } from '../models/media-type';
-import {GetTopRatedShowsResponse} from "../dto/get-top-rated-shows-response";
-import {GenreDto} from "../dto/genre-dto";
+import { GetTopRatedShowsResponse } from '../dto/get-top-rated-shows-response';
+import { GenreDto } from '../dto/genre-dto';
+import { GetUpcomingMoviesResponse } from '../dto/get-upcoming-movies-response';
+import { GetNowPlayingMoviesResponse } from '../dto/get-now-playing-movies-response';
 
 @Injectable()
 export class MediaService {
@@ -17,6 +19,27 @@ export class MediaService {
     return this.client
       .get<GetGenresResponse>(`/genre/movie/list`)
       .pipe(map(response => response.genres));
+  }
+
+  //TODO: trending, playing, rated, upcoming
+  trending(page: number = 1): Observable<GetTrendingLastWeekResponse> {
+    return this.client.get<GetTrendingLastWeekResponse>(
+      `/trending/all/week?page=${page}`,
+    );
+  }
+
+  rated(page: number = 1): Observable<GetTopRatedMoviesResponse> {
+    return this.client.get<GetTopRatedMoviesResponse>(
+      `/movie/top_rated?page=${page}`,
+    );
+  }
+
+  upcoming(page: number = 1): Observable<GetUpcomingMoviesResponse> {
+    return this.client.get<GetUpcomingMoviesResponse>('/movie/upcoming');
+  }
+
+  playing(page: number = 1): Observable<GetNowPlayingMoviesResponse> {
+    return this.client.get<GetNowPlayingMoviesResponse>('/movie/now_playing');
   }
 
   searchByQuery(
@@ -30,18 +53,10 @@ export class MediaService {
     });
   }
 
-  fetchTopRatedMovies(page: number = 1): Observable<GetTopRatedMoviesResponse> {
-    return this.client.get<GetTopRatedMoviesResponse>(
-      `/movie/top_rated?page=${page}`,
+  fetchTopRatedShows(page: number = 1): Observable<GetTopRatedShowsResponse> {
+    return this.client.get<GetTopRatedShowsResponse>(
+      `/tv/top_rated?page=${page}`,
     );
-  }
-
-  fetchTopRatedShows(page : number = 1) : Observable<GetTopRatedShowsResponse> {
-    return this.client.get<GetTopRatedShowsResponse>(`/tv/top_rated?page=${page}`)
-  }
-
-  fetchTrendingMedia(): Observable<GetTrendingLastWeekResponse> {
-    return this.client.get<GetTrendingLastWeekResponse>(`/trending/all/week`);
   }
 
   fetchDetailsById(

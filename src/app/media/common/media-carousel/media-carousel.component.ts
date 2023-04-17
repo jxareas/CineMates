@@ -21,7 +21,7 @@ export class MediaCarouselComponent implements OnInit {
   subscribeToTrendingMovies(): void {
     this.isLoadingTrending = true;
     this.mediaService
-      .fetchTrendingMedia()
+      .trending()
       .pipe(delay(500))
       .subscribe({
         next: trendingMedia => {

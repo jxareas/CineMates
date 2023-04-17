@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'jx-media-tabs',
@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./media-tabs.component.scss'],
 })
 export class MediaTabsComponent {
-  tagActive: string = 'popular';
+  selectedTag: string = 'trending';
 
-  goToTag(tag: string): void {
-    this.tagActive = tag;
+  @Output()
+  tabItemClick = new EventEmitter<string>();
+
+  goToTag(newTag: string): void {
+    this.selectedTag = newTag;
+    this.tabItemClick.emit(newTag);
   }
 }

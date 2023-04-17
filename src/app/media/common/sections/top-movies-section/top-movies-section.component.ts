@@ -22,7 +22,7 @@ export class TopMoviesSectionComponent implements OnInit {
   subscribeToTopRatedMovies(): void {
     this.isLoadingTopRatedMovies = true;
     this.mediaService
-      .fetchTopRatedMovies()
+      .rated()
       .pipe(delay(1_000))
       .subscribe({
         next: topRatedMoviesResponse => {
