@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MediaService} from "../../../media/api/media.service";
-import {GenreDto} from "../../../media/dto/get-genres-response";
+
+import {GenreDto} from "../../../media/dto/genre-dto";
 
 @Component({
   selector: 'jx-header',

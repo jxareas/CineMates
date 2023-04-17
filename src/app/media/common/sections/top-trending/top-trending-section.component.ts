@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TrendingMediaDto } from '../../../dto/get-trending-last-week-response';
 import { MediaService } from '../../../api/media.service';
 import { delay } from 'rxjs';
+import {TrendingMediaDto} from "../../../dto/trending-media-dto";
 
 @Component({
   selector: 'jx-top-trending-section',
@@ -21,7 +21,7 @@ export class TopTrendingSectionComponent implements OnInit {
   subscribeToTrendingMedia(): void {
     this.isLoadingTrendingMedia = true;
     this.mediaService
-      .fetchTrendingMedia()
+      .trending()
       .pipe(delay(1_000))
       .subscribe(response => {
         this.trendingMedia = response.results.slice(0, 5);

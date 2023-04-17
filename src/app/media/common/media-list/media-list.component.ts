@@ -4,8 +4,8 @@ import { MediaCardViewModel } from '../media-card/media-card-viewmodel';
 import { GetTrendingLastWeekResponse } from '../../dto/get-trending-last-week-response';
 
 @Component({
-  templateUrl: './media-list.component.html',
   selector: 'jx-media-list',
+  templateUrl: './media-list.component.html',
   styleUrls: ['./media-list.component.scss'],
 })
 export class MediaListComponent {

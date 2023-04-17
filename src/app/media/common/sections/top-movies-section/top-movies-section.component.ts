@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from '../../../api/media.service';
 import { delay, map, of, take, takeUntil } from 'rxjs';
-import { TopRatedMoviesDto } from '../../../dto/get-top-rated-movies-response';
+
+import {MovieDto} from "../../../dto/movie-dto";
 
 @Component({
   selector: 'jx-top-movies-section',
@@ -9,7 +10,7 @@ import { TopRatedMoviesDto } from '../../../dto/get-top-rated-movies-response';
   styleUrls: ['./top-movies-section.component.scss'],
 })
 export class TopMoviesSectionComponent implements OnInit {
-  topRatedMovies: TopRatedMoviesDto[];
+  topRatedMovies: MovieDto[];
   isLoadingTopRatedMovies: boolean;
 
   constructor(private mediaService: MediaService) {}
@@ -21,7 +22,7 @@ export class TopMoviesSectionComponent implements OnInit {
   subscribeToTopRatedMovies(): void {
     this.isLoadingTopRatedMovies = true;
     this.mediaService
-      .fetchTopRatedMovies()
+      .rated()
       .pipe(delay(1_000))
       .subscribe({
         next: topRatedMoviesResponse => {

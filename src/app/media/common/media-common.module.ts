@@ -6,7 +6,7 @@ import { MediaListComponent } from './media-list/media-list.component';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../../core/pipes/pipes.module';
 import { UiModule } from '../../core/ui/ui.module';
-import { MediaTabsComponent } from './media-pager/media-tabs.component';
+import { MediaTabsComponent } from './media-tabs/media-tabs.component';
 import { TopMoviesSectionComponent } from './sections/top-movies-section/top-movies-section.component';
 import { MediaSectionComponent } from './sections/media-section/media-section.component';
 import { TopShowsSectionComponent } from './sections/top-shows-section/top-shows-section.component';

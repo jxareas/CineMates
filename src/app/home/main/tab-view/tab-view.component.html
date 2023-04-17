@@ -1,4 +1,4 @@
-<jx-media-tabs />
+<jx-media-tabs (tabItemClick)="goToTag($event)" />
 <jx-media-data-view
   [trendingMedia]="trendingMedia"
   (changePage)="goToPage($event)"
