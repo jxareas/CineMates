@@ -28,14 +28,16 @@ export class MediaCardComponent {
       this.subscription = this.mediaService
         .fetchDetailsById(this.movie.id, this.getMediaType())
         .pipe(debounceTime(1_000))
-        .subscribe(res => {
-          this.details = res;
+        .subscribe(getMediaDetailsResponse => {
+          this.details = getMediaDetailsResponse;
         });
     }
   }
 
   getMediaType(): MediaType {
-    return this.movie.media_type == 'movie' ? MediaType.Movie : MediaType.TV;
+    // TODO : Refactor this code, it is not intuitive
+    // Explanation: While using the TMDb API, `title` is a property for a Movie while `name` is that of a TV Show
+    return this.movie.title ? MediaType.Movie : MediaType.TV;
   }
 
   leave() {

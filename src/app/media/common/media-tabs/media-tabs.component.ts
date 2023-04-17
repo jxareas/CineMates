@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./media-tabs.component.scss'],
 })
 export class MediaTabsComponent {
-  selectedTag: string = 'trending';
+  selectedTag: string = 'popular';
 
   @Output()
   tabItemClick = new EventEmitter<string>();

@@ -20,10 +20,10 @@ export class TabViewComponent implements OnInit {
     this.goToPage(tag)
   }
 
-  goToPage(tag: string = 'trending', page: number = 1): void {
+  goToPage(tag: string = 'popular', page: number = 1): void {
     this.isLoadingTrending = true;
     this.mediaService[tag](page)
-      .pipe(delay(500))
+      .pipe(delay(400))
       .subscribe({
       next: trendingMovies => {
         this.trendingMedia = trendingMovies;
