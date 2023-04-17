@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { GenreDto, GetGenresResponse } from '../dto/get-genres-response';
+import { GetGenresResponse } from '../dto/get-genres-response';
 import { GetMoviesByQueryResponse } from '../dto/get-movies-by-query-response';
 import { GetTrendingLastWeekResponse } from '../dto/get-trending-last-week-response';
 import { GetTopRatedMoviesResponse } from '../dto/get-top-rated-movies-response';
 import { MediaType } from '../models/media-type';
 import {GetTopRatedShowsResponse} from "../dto/get-top-rated-shows-response";
+import {GenreDto} from "../dto/genre-dto";
 
 @Injectable()
 export class MediaService {

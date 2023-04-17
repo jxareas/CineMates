@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TrendingMediaDto } from '../../../dto/get-trending-last-week-response';
 import { MediaService } from '../../../api/media.service';
 import { delay } from 'rxjs';
+import {TrendingMediaDto} from "../../../dto/trending-media-dto";
 
 @Component({
   selector: 'jx-top-trending-section',

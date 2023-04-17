@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TopRatedShowsDto } from '../../../dto/get-top-rated-shows-response';
 import { MediaService } from '../../../api/media.service';
 import {delay, filter, map} from 'rxjs';
+import {TvShowDto} from "../../../dto/tv-show-dto";
 
 @Component({
   selector: 'jx-top-shows-section',
@@ -9,7 +9,7 @@ import {delay, filter, map} from 'rxjs';
   styleUrls: ['./top-shows-section.component.scss'],
 })
 export class TopShowsSectionComponent implements OnInit {
-  topRatedShows: TopRatedShowsDto[];
+  topRatedShows: TvShowDto[];
   isLoadingTopRatedShows: boolean;
 
   constructor(private mediaService: MediaService) {}

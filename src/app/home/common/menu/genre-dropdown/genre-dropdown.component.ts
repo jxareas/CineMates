@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {GenreDto} from "../../../../media/dto/get-genres-response";
 import {MediaService} from "../../../../media/api/media.service";
+import {GenreDto} from "../../../../media/dto/genre-dto";
 
 @Component({
   selector: 'jx-genre-dropdown',
