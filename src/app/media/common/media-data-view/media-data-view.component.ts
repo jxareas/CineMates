@@ -9,17 +9,9 @@ import {GetTrendingLastWeekResponse} from "../../dto/get-trending-last-week-resp
 export class MediaDataViewComponent {
   @Input() trendingMedia: GetTrendingLastWeekResponse;
   @Input() isLoading: boolean;
-  @Output() changePage: EventEmitter<any> = new EventEmitter();
+  @Output() changePage: EventEmitter<number> = new EventEmitter();
 
-  previousPage(): void {
-    //TODO : Handle navigation to previous page
-  }
-
-  nextPage(): void {
-    //TODO : Handle navigation to next page
-  }
-
-  goToPage(page: number): void {
-    //TODO : Handle custom page navigation
+  goToPage(newPage : number) {
+    this.changePage.emit(newPage);
   }
 }

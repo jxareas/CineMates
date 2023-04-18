@@ -1,5 +1,5 @@
-<jx-media-tabs (tabItemClick)="goToTag($event)" />
+<jx-media-tabs #tabs (tabItemClick)="goToTag($event)" />
 <jx-media-data-view
   [trendingMedia]="trendingMedia"
-  (changePage)="goToPage($event)"
+  (changePage)="goToPage(tabs.selectedTag, $event)"
   [isLoading]="isLoadingTrending" />

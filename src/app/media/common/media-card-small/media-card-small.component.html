@@ -7,10 +7,10 @@
       <figure>
         <img
           class="thumbnail"
-          [style.visibility]="movie.poster_path ? 'visible' : 'hidden'"
+          [style.visibility]="movie.backdrop_path ? 'visible' : 'hidden'"
           [src]="
-            movie.poster_path
-              ? 'https://image.tmdb.org/t/p/w300' + movie.poster_path
+            movie.backdrop_path
+              ? 'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path
               : ''
           "
           alt="" />

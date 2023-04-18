@@ -1,5 +1,6 @@
 <jx-paginator
   *ngIf="trendingMedia"
-  [initialPage]="trendingMedia.page"
+  (changePage)="goToPage($event)"
+  [currentPage]="trendingMedia.page"
   [finalPage]="trendingMedia.total_pages" />
-<jx-skeleton  *ngIf="!trendingMedia" height="50px"/>
+<jx-skeleton *ngIf="!trendingMedia" height="50px" />
