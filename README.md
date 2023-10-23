@@ -28,21 +28,12 @@
 
 **CineMates** is a website built using the Angular framework, that provides users with a comprehensive source of information on movies, TV shows, and actors. The website features a sleek and user-friendly interface that allows users to easily browse through their favorite movies, TV shows, or actors.
 
-## 🕹️ UI/UX 🕹️
-
-🚧 *Work In Progress...* 🚧
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 📷 Screenshots 📷
 
-🚧 *Work In Progress...* 🚧
 
 | Home Screen   | Home Screen  | 
 | ------------- | ------------- |  
-| ![](readme-assets/images/landing_top_ipad_pro.png)  | ![](readme-assets/images/landing_bottom_ipad_pro.png)  | 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+| ![](readme-assets/images/landing_top_ipad_pro.png)  | ![](readme-assets/images/landing_bottom_ipad_pro.png)  |
 
 ## 📝 Requirements 📝
 
@@ -71,12 +62,34 @@ export const environment = {
 };
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🦾 Technologies 🦾
 
+This Angular project relies on various libraries and frameworks to enable the development of dynamic and feature-rich web applications. Here's an overview of the key dependencies:
 
-🚧 *Work In Progress...* 🚧
+- **Angular**: A comprehensive and widely-used framework that empowers the creation of dynamic, high-performance web applications.
+
+- **TypeScript**: A statically typed superset of JavaScript that compiles to plain JavaScript. It enhances the development experience by introducing static typing, improved tooling, and increased code reliability.
+
+- **RxJs**: A reactive programming library that simplifies handling asynchronous and event-driven programming.
+
+- **Bootstrap**: A popular CSS framework that provides a variety of pre-designed components and styles for building responsive and visually appealing web interfaces.
+
+- **ESLint**: A pluggable static code analysis tool used to identify problematic code patterns and maintain code quality in JavaScript and TypeScript.
+
+- **Husky**: A git hook management tool that facilitates the execution of scripts or commands before Git events like commit or push.
+
+- **Prettier**: An opinionated code formatter that enforces consistent code style and formatting rules.
+
+- **lint-staged**: A tool that enables running linters on staged files in a Git repository, working in conjunction with Husky to ensure code quality before committing.
+
+- **animate.css**: A library for adding CSS animations to enhance user experience.
+
+- **autoprefixer**: A tool that automatically adds vendor prefixes to CSS properties for cross-browser compatibility.
+
+- **font-awesome**: A library providing a collection of scalable vector icons for web application design.
+
+Please note that the specific versions of these dependencies may change over time, so it's essential to keep them up to date for optimal functionality and security.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
